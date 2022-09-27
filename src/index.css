@@ -28,7 +28,9 @@ font-family: 'Varela Round', sans-serif;
   transition-timing-function: ease;
   transition-property: width;
 }
-
+.app.default {
+  background-image: url('./default.jpg');
+}
 .app.warm {
   background-image: url('./cloud2.jpg');
 }

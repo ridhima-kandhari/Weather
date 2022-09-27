@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 const api = {
-  key: "f326d9ce3860209bc6e6f2e2325d3e73",
-  base: "https://api.openweathermap.org/data/2.5/",
+  key: process.env.REACT_APP_API_KEY,
+  base: process.env.REACT_APP_BASE,
 };
+
 
 function App() {
   const [query, setQuery] = useState("");
@@ -57,10 +58,10 @@ function App() {
     <div
       className={
         typeof weather.main != "undefined"
-          ? weather.main.temp > 16
+          ? weather.main.temp > 30
             ? "app warm"
             : "app"
-          : "app"
+          : "app default"
       }
     >
       <main>
